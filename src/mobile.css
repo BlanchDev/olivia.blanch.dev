@@ -1,0 +1,59 @@
+@media only screen and (max-width: 1200px) {
+
+  body{
+    overflow-y: auto !important;
+    width: 100% !important;
+    background-size: 100% !important;
+  }
+
+  .showMobile{
+    display: flex !important;
+  }
+
+  .leftBar{
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+  }
+  .centerBar{
+    background: linear-gradient(240deg, rgba(3, 7, 16, 1) 5%, rgba(8, 7, 37, 1) 28%, rgba(8, 29, 30, 1) 47%, rgba(5, 10, 25, 1) 100%);
+    position: absolute;
+    top: 0;
+  }
+  .rightBar{
+    display: none;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+    background: linear-gradient(230deg, rgba(12,40,35,1) 10%, rgba(10,27,36,1) 35%, rgba(8,18,37,1) 75%, rgba(6,8,38,1) 90%) !important;
+  }
+
+  .chatArea{
+    width: 100% !important;
+    min-width: 100%;
+    height: 100% !important;
+  }
+
+  .msgList{
+    width: 100% !important;
+    min-width: 100%;
+    padding: 30px 10px;
+    height: calc(100% - 1px);
+  }
+
+  .msgCame{
+    width: 100% !important;
+    min-width: 100%;
+  }
+
+  .writeMsg{
+    margin-bottom: 50px;
+  }
+
+}

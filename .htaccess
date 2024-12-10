@@ -1,0 +1,25 @@
+RewriteEngine On
+
+# Her zaman https kullan
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# www olmadan yönlendir
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Dosya uzantılarını gösterme
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+# Chat sayfasını yönlendir
+RewriteRule ^chat/([0-9]+)/?$ chat.php?chatid=$1 [L]
+
+# Klasörlere erişimi engelle
+# RewriteRule ^api - [F,L]
+
+# URL sonunda slash olmadan yönlendir
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]

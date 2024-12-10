@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0C1823; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0C2721; 
+  border-radius: 30px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #99938B; 
+}
+
+::selection {
+  color: whitesmoke;
+  background: #047941;
+  font-weight: bold !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  background: linear-gradient(240deg, rgba(3, 7, 16, 1) 5%, rgba(8, 7, 37, 1) 28%, rgba(8, 29, 30, 1) 47%, rgba(5, 10, 25, 1) 100%);
+  background-size: cover;
+  background-position: center;
+  color: #dbdee1;
+  overflow: hidden;
+  /*font-family: 'Segoe UI';*/
+  font-family: "Poppins";
+  font-size: 16px;
+}
+
+textarea {
+  all: unset;
+}
+
+button, a {
+  all: unset;
+  cursor: pointer;
+  user-select: none !important;
+}
+input[type="text"],
+input[type="password"]{
+  all: unset;
+  outline: 1px solid #43BD84;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+input[type="text"]:focus,
+input[type="password"]:focus{
+  background: rgba(0, 0, 0, 0.5);
+  outline: 1px solid aquamarine;
+  transition: all 0.3s ease;
+}
+img{
+  user-select: none !important;
+}
+
+.showMobile{
+  display: none !important;
+}
+
+.leftBar {
+  min-width: 260px;
+  max-width: 260px;
+  height: 100%;
+  background: linear-gradient(230deg, rgba(12,40,35,1) 10%, rgba(10,27,36,1) 35%, rgba(8,18,37,1) 75%, rgba(6,8,38,1) 90%);
+}
+
+.centerBar {
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.2);
+}
+
+.rightBar {
+  min-width: 260px;
+  max-width: 260px;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.2);
+}
+
+
+.barTitles {
+  min-height: 50px !important;
+  height: 50px !important;
+  max-height: 50px !important;
+  width: 100%;
+  border-bottom: 2px solid #0e122d;
+  color: whitesmoke;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: none;
+}
+
+
+/* LeftBar Settings*/
+
+.bigBtn {
+  width: 100%;
+  height: 100%;
+}
+
+.bigBtn:hover {
+  background: #203232;
+  transition: all 0.3s ease;
+  color: whitesmoke;
+}
+
+.chatBtn {
+  padding: 5px 20px;
+  border-radius: 5px;
+  background: rgba(11, 28, 45, 0.2);
+  transition: all 0.3s ease;
+  color: #80848d;
+  font-size: 0.9rem;
+  font-weight: 600;
+  gap: 10px;
+}
+
+.chatBtn:hover {
+  background: linear-gradient(90deg, rgba(32,47,76,1) 0%, rgba(34,61,74,1) 100%);
+  transition: all 0.3s ease;
+}
+
+.chatBtn:hover .chatName {
+  color: whitesmoke !important;
+}
+
+.chatBtn .left {
+  gap: 10px;
+}
+
+.chatBtn .chatBirth {
+  font-size: 0.6rem;
+  color: #80848d !important;
+}
+
+.chatBtnActive {
+  background: linear-gradient(90deg, rgba(52,69,101,1) 0%, rgba(55,86,98,1) 100%) !important;
+  transition: all 0.3s ease !important;
+  color: whitesmoke !important;
+}
+
+.chatBtnActive .chatBirth {
+  font-size: 0.6rem;
+  color: silver !important;
+}
+
+.leftBarGreenBtn{
+  background: linear-gradient(322deg, rgba(30,97,82,1) 17%, rgba(6,108,84,1) 53%, rgba(0,45,40,1) 100%);
+  color: whitesmoke;
+  padding: 5px 0;
+  border-radius: 10px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.leftBarGreenBtn:hover{
+  transition: all 0.3s ease;
+  filter: brightness(0.7);
+}
+
+
+
+
+
+
+
+/* Chat Settings */
+.chatTopBar {
+  padding: 0px 25px;
+  width: 100%;
+  height: 100%;
+}
+
+.chatArea {
+  padding-bottom: 20px;
+  width: 100%;
+  height: calc(100% - 50px);
+  gap: 10px;
+}
+
+.msgList {
+  padding: 30px;
+  overflow-y: auto;
+  gap: 20px;
+  width: calc(100% - 60px);
+  height: calc(100% - 60px);
+}
+
+.msg {
+  all: unset;
+  width: 100%;
+  padding: 5px 20px;
+}
+
+.msgCame {
+  gap: 15px;
+  max-width: 850px;
+}
+
+.msgCame img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.msgCame .msgDetails {
+  gap: 3px;
+}
+
+.msgCame .msgHead {
+  gap: 10px;
+}
+
+.msgCame .username {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: whitesmoke;
+}
+
+.msgCame .msgDate {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #959BA4;
+}
+
+.msgCame .msgContent {
+  font-size: 1rem;
+  font-weight: 500;
+  color: whitesmoke;
+  width: 100%;
+  white-space: pre-wrap;
+}
+
+.gpt {
+  background: rgba(35, 155, 85, 0.1);
+  padding: 20px 20px;
+  border-radius: 2px 10px 20px 2px;
+  border-left: 3px solid #43bd84;
+  width: calc(100% - 3px);
+}
+
+.gpt .username {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #00ff8c;
+}
+
+.writing{
+  display: none;
+  gap: 10px;
+  color: aquamarine;
+
+  background: linear-gradient(to right,greenyellow, aqua);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.writeMsg {
+  width: 100%;
+  padding: 10px 25px;
+  border-radius: 10px;
+  background: linear-gradient(120deg, rgba(8,16,37,1) 0%, rgba(10,29,35,1) 15%, rgba(12,41,37,1) 50%, rgba(11,40,47,1) 85%, rgba(10,10,49,1) 100%);
+}
+
+.textArea {
+  width: 100%;
+  height: 26px;
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-size: 1.1rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background: none;
+  border-radius: 10px;
+}
+
+/* RightBar Settings */
+.chatSettings button {
+  height: 100%;
+  width: 50%;
+}
+
+.chatSettings button:hover {
+  background: #272546;
+  transition: all 0.3s ease;
+  color: whitesmoke;
+}
+
+.userlist .user {
+  width: 100%;
+  padding: 5px;
+  gap: 15px;
+}
+
+.userlist .user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.userlist .user .Name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+}
+.userlist .user .Role {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: gray;
+}
+
+.rightSaveBtn{
+  background: #0C2926;
+  border-radius: 10px;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+.rightSaveBtn:hover{
+  background: green;
+  transition: all 0.3s ease;
+  
+}
+
+
+
+
+
+/* Global Settings */
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.aic {
+  align-items: center;
+}
+
+.aifs {
+  align-items: flex-start;
+}
+
+.aife {
+  align-items: flex-end;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.jcsa {
+  justify-content: space-around;
+}
